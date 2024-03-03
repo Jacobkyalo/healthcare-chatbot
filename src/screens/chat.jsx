@@ -33,6 +33,10 @@ export default function Chat() {
         themeColor: "#2563eb",
       });
     };
+
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
   return (

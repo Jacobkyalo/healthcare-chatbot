@@ -14,9 +14,9 @@ export default function Chat() {
 
     script.onload = () => {
       window.botpressWebChat.init({
-        composerPlaceholder: "Chat with Ndolo",
+        composerPlaceholder: "Chat with Healthcare Chatbot",
         botConversationDescription:
-          "    Our healthcare chatbot is a conversational agent that can help you             with your health-related queries like information on diseases, symptoms, and treatments, finding a doctor or a hospital near you and also Providing tips for a healthy lifestyle.",
+          "Our healthcare chatbot is a conversational agent that can help you with your health-related questions.",
         botId: "f61e7022-58eb-4f9d-8d6e-d1bc5ecedd4f",
         hostUrl: "https://cdn.botpress.cloud/webchat/v1",
         messagingUrl: "https://messaging.botpress.cloud",
@@ -24,7 +24,7 @@ export default function Chat() {
         webhookId: "6d8feb1d-f8f5-4a3f-a515-b10a329e5478",
         lazySocket: true,
         themeName: "prism",
-        botName: "Ndolo Healthcare Chatbot",
+        botName: "Healthcare Chatbot",
         stylesheet:
           "https://webchat-styler-css.botpress.app/prod/6c662f70-51b2-4620-a9c0-15c06298bd86/v38425/style.css",
         frontendVersion: "v1",
@@ -36,6 +36,7 @@ export default function Chat() {
 
     return () => {
       document.body.removeChild(script);
+      // window.location.reload();
     };
   }, []);
 

@@ -75,7 +75,10 @@ export default function AuthContextProvider({ children }) {
   const createPasswordRecovery = async (email) => {
     try {
       setLoading(true);
-      await account.createRecovery(email, "http://localhost:5173/reset");
+      await account.createRecovery(
+        email,
+        "https://healthcare-bot.vercel.app/reset"
+      );
       setLoading(false);
 
       toast.success("Password recovery email sent to your email inbox or spam");

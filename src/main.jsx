@@ -24,10 +24,10 @@ const router = createBrowserRouter(
       <Route path="signup" element={<Signup />} errorElement={<NotFound />} />
       <Route path="login" element={<Login />} errorElement={<NotFound />} />
       <Route path="forgot" element={<Forgot />} errorElement={<NotFound />} />
+      <Route path="reset" element={<Reset />} errorElement={<NotFound />} />
       <Route element={<PrivateRoute />}>
-        <Route path="reset" element={<Reset />} errorElement={<NotFound />} />
+        <Route path="chat" element={<Chat />} errorElement={<NotFound />} />
       </Route>
-      <Route path="chat" element={<Chat />} errorElement={<NotFound />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )
